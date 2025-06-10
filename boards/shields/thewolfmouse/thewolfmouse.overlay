@@ -7,19 +7,6 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default";
-
-        kscan = <&kscan0>;
-        transform = <&default_transform>;
-
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            ;
-    };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
