@@ -21,4 +21,4 @@
 include:
   - name: TheWolfMouse
     board: nice_nano_v2
-    shield: the_wolf_mouse
+    shield: thewolfmouse
