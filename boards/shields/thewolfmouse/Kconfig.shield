@@ -1,0 +1,4 @@
+# 注意逗號後面不能有空格
+
+config SHIELD_THEWOLFMOUSE
+    def_bool $(shields_list_contains,thewolfmouse)

@@ -1,0 +1,12 @@
+file_format: "1"
+id: thewolfmouse
+name: thewolfmouse
+type: shield
+url: https://github.com/tayloryangyoyo/zmk-config-the-wolf-mouse
+requires: [pro_micro]
+features:
+  - keys
+  - mouse
+siblings:
+  - thewolfmouse
+

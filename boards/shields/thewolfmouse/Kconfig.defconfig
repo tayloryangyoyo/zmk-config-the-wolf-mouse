@@ -1,0 +1,7 @@
+if SHIELD_THEWOLFMOUSE
+
+# 名字需要少於有16個字元
+config ZMK_KEYBOARD_NAME
+    default "thewolfmouse"
+
+endif

@@ -19,7 +19,6 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: helix_left
-  - board: nice_nano_v2
-    shield: helix_right
+  - name: TheWolfMouse
+    board: nice_nano_v2
+    shield: the_wolf_mouse
