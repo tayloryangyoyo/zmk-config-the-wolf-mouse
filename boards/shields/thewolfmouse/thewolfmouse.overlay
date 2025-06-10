@@ -7,17 +7,6 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-direct";
-        wakeup-source;
-        debounce-press-ms = <10>;
-        debounce-release-ms = <10>;
-        input-gpios
-            = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            ;
-    };
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <2>;
@@ -26,6 +15,17 @@
             RC(0,0)  RC(0,1)
         >;
     };
+    
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+
+        input-gpios
+            = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+
 };
 
 &pinctrl {
