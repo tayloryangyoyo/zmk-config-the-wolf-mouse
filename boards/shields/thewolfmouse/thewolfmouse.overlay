@@ -20,8 +20,8 @@
         wakeup-source;
 
         input-gpios
-            = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
@@ -69,8 +69,9 @@
 };
 
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-  };
+    glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    };
 };
