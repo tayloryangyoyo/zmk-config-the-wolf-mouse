@@ -70,9 +70,9 @@
 };
 
 / {
-    glidepoint_listener {
+    anyName_listener {
         compatible = "zmk,input-listener";
-        device = <&glidepoint>;
+        device = <&trackball>;
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
     };
 };
