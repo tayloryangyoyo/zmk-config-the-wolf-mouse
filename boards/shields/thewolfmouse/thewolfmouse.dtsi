@@ -82,10 +82,3 @@
 		force-awake-4ms-mode;
     };
 };
-
-/ {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&pd0>;
-  };
-};
