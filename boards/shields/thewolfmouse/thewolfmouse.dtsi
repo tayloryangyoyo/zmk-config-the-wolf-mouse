@@ -4,7 +4,7 @@
 / {
     chosen {
 		zmk,kscan = &kscan0;
-		zmk,matrix-transform = &default_transform;
+		// zmk,matrix-transform = &default_transform;
 	};
 
     default_transform: keymap_transform_0 {
@@ -72,7 +72,7 @@
         compatible = "pixart,pmw3610";
         label = "MOU0";
         reg = <0>;
-        spi-max-frequency = <4000000>;
+        spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <600>;
 		evt-type = <INPUT_EV_REL>;
@@ -81,4 +81,11 @@
 		force-awake;
 		force-awake-4ms-mode;
     };
+};
+
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&pd0>;
+  };
 };
